@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+
+    /* 여러번 사용할 스타일이라면 아래와 같이 지정해서 편히 재활용하는 방법 */
+    .dp-inline-block {
+      display: inline-block;
+    }
+    .dp-inline {
+      display: inline;
+    }
+    .dp-block {
+      display: block;
+    }
+
+    body div {
+      width: 500px;
+      height: 200px;
+      border: 1px solid #000;
+    }
+
+    /*
+    최상위 부모인 body 태그를 시작으로 div를 선택했다.
+    띄어쓰기를 진행하면 자식으로 있는 모든 태그를 선택한다는 뜻이된다.
+    */
+    body div:nth-child(2) {
+      height: 500px;
+      background-color: #ccc;
+    }
+    /* 
+      n번째 자식을 선택하는 '순서 선택자' 방식으로
+      선택자 작성이 다소 길어지지만 '순서'로 선택했다는 점이 매우 몇확 
+    */
+
+    body div:nth-child(3) {
+      height: 400px;
+      background-color: #333;
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="dp-inline-block"></div>
+  <!-- ? 필요한만큼 속성을 클래스에 담아 개별 관리 + 활용하는 것이 마크업을 편하게 하는 방법이된다. -->
+  <!-- ? 실제로 필드에서 자주 사용하는 CSS 프레임워크들이 클래스를 체이닝(이어붙이는 방식)으로 간편하게 스타일링 하고 있다. -->
+  <div></div>
+  <div></div>
+
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- ? 일련의 문자열들이 모두 <p> 태그에 모여있음 -->
+  <p>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae, corrupti praesentium modi iusto consectetur cumque explicabo fugit! Tempora ea quibusdam culpa nostrum, accusamus dolorem esse, quaerat nulla a sint laborum?
+    Quidem hic possimus asperiores omnis odio facere odit, nisi sint veritatis, porro accusantium delectus neque totam explicabo quod dicta officiis. Suscipit illo deleniti cum consequuntur sit neque asperiores reiciendis debitis.
+    Nam animi id deserunt sunt laborum nulla consequuntur veritatis possimus aspernatur a nisi blanditiis libero facere soluta similique, corrupti cupiditate nostrum iste dolores, repellat, incidunt suscipit error? Porro, officiis! Magni?
+    Rem quisquam atque laboriosam. Modi, nemo temporibus. Tenetur, labore enim ducimus repellat amet quod at sint totam id aspernatur rerum rem nobis tempore libero. Quidem error voluptate iusto fugit ipsam.
+    Impedit eum placeat non, quaerat voluptatum quos? Odit nulla modi, eaque eum mollitia neque rerum nostrum saepe voluptas dignissimos! Libero ratione suscipit et itaque eveniet laudantium commodi. Ea, nam id?
+    Repellat sed animi optio est laudantium accusamus, neque, unde quisquam veniam voluptatum recusandae impedit dolores iusto quibusdam incidunt dolorum sequi perferendis quaerat nemo sit non molestiae ad natus tempora. Cumque!
+    Fugiat quae vel voluptas laudantium, magnam maiores atque nobis doloribus, vitae repudiandae voluptatum? Harum architecto voluptatum, perferendis voluptatem sint cum quisquam eum recusandae tenetur voluptas voluptatibus impedit animi soluta quia?
+    Sed suscipit enim incidunt fuga ea ab molestiae culpa, mollitia quo nisi rerum odit officia veniam. Sequi pariatur exercitationem sed quis ducimus. Deserunt deleniti praesentium ad recusandae obcaecati repellat voluptatum?
+    Eveniet corporis dolor sequi modi, soluta voluptatum. Officiis nobis, voluptatum, beatae rem eligendi quam sed a inventore obcaecati corporis similique? Possimus officiis itaque totam doloribus cupiditate, optio non quo exercitationem?
+    Voluptate autem hic soluta nesciunt vitae aliquam dolorum nisi distinctio mollitia quibusdam laudantium similique, fuga quis maiores animi nemo ex quas quam. Deserunt itaque doloremque reprehenderit magni nihil, dignissimos quam.
+    Culpa voluptates quia necessitatibus fuga velit enim omnis quod, modi doloremque id ratione distinctio praesentium ullam amet libero sit maiores. Minima illo officiis natus, adipisci fugit veniam aliquam pariatur consequatur?
+    Quia aliquid debitis similique inventore molestias vel aut? Nisi, quo illum iusto animi aspernatur libero, minima labore repudiandae perferendis maxime, ab repellendus. Beatae, aperiam nulla neque quae sint vitae ducimus?
+    Nostrum, commodi quod? Maiores sapiente aspernatur, maxime voluptatem beatae nam sequi? Deserunt quas non in, neque vitae nam iste culpa officia praesentium adipisci mollitia doloribus dignissimos accusamus iure maxime numquam.
+    Distinctio sed quos, iure voluptas fugiat ut. Aliquam quas earum doloribus voluptate deserunt adipisci, pariatur, tempora fuga inventore odit similique velit quaerat. Expedita facilis qui suscipit laboriosam quos itaque esse?
+    Unde est odit maxime tenetur placeat accusamus voluptas qui earum nihil cumque, aliquam expedita natus inventore reprehenderit culpa optio harum ducimus veritatis ad quis minima, debitis omnis! Id, incidunt laudantium.
+    Aliquid minus non, odio voluptate iusto nam mollitia sequi cupiditate at laborum officiis facilis, delectus dolores veritatis voluptates consequuntur? Molestias mollitia quibusdam suscipit perspiciatis cumque dicta doloribus quaerat placeat possimus.
+    Autem sequi illo quo laborum sed at a impedit pariatur facilis itaque, adipisci asperiores. Ipsam cumque numquam porro quia. Quasi recusandae aliquid magnam excepturi reiciendis architecto. Sed nulla modi delectus.
+    Culpa vero voluptatem eius doloremque dolorum sunt vel deserunt dolore dignissimos id tempora illum temporibus, distinctio consectetur ipsum? Reprehenderit velit doloribus id consectetur impedit adipisci voluptates officia in assumenda dolorem!
+    Eligendi, a! Quod, a? Quas ad dolores harum dolorem cupiditate tempore a veritatis dicta, deserunt fugiat quia iste sint rem. Ab quis perspiciatis suscipit temporibus dolorum qui voluptas ut incidunt!
+    Repellat rem quam accusantium quisquam possimus nostrum, consequatur dolorum ad doloribus sed neque culpa ipsam quae ab minima, alias, impedit minus. Cupiditate aperiam, placeat consequuntur assumenda incidunt illum quidem sed.
+  </p>
+
+  <script>
+
+    let text = "lorem"
+    let p = window.document.body.children[0];
+    console.log();
+
+    console.log(typeof(p.outerText));
+    console.log(p.outerText[0]);
+    console.log(p.outerText.length);
+    let count = 0;
+    for(let i = 0; i < p.outerText.length; i++) {
+      if(p.outerText[i] === "e") {
+        count++;
+      }
+    }
+    console.log(count + 'count 값은 이것입니다.');
+
+
+  </script>
+
+</body>
+</html>

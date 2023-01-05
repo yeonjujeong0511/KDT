@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {margin:0; padding:0; box-sizing: border-box;}
+    ul {
+      list-style-type: none;
+    }
+
+    
+    #root {
+      width:100vw;
+      height:100vh;
+      background-color: #333;
+
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    ul {
+      /* width:50vw;
+      height:20vh; */
+      background-color: cadetblue;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      padding:10px;
+    }
+
+    li {
+      width:10vw;
+      height:10vh;
+      background-color: salmon;
+      margin:10px;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+  </style>
+</head>
+<body>
+  <div id="root">
+    <ul>
+      <li>피카츄</li>
+      <li>피카츄</li>
+      <li>피카츄</li>
+      <li>피카츄</li>
+      <li>피카츄</li>
+      <li>피카츄</li>
+    </ul>
+  </div>
+
+  <script>
+    
+    let container = document.querySelector("ul");
+    
+    let isStatus = true;
+    container.addEventListener("click", function() {
+      if(isStatus === true) {
+        container.style.flexDirection = "column";
+        isStatus = false;
+      } else {
+        container.style.flexDirection = "row";
+        isStatus = true;
+      }
+    });
+
+
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {margin:0;padding:0; box-sizing: border-box;}
+    .flex-center-center {
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .flex-direction-column {
+      flex-direction: column;
+    }
+    #root {
+      width:100vw;
+      height:100vh;
+      background-color: #333;
+    }
+    #contents {
+      width:300px;
+      height:700px;
+      background-color: rgba(200, 200, 200, 0.8);
+    }
+    #trigger {
+      width:300px;
+      height:200px;
+      margin-top:10px;
+    }
+  
+  </style>
+</head>
+<body>
+  <div id="root" class="flex-center-center flex-direction-column">
+    <div id="contents" class="flex-center-center"></div>
+    <button id="trigger"> Do you want Truth?</button>
+  </div>
+  <script>
+    let contents = document.getElementById("contents");
+    let trigger = document.getElementById("trigger");
+    
+    let absolutlyTrueDataReal = {
+      name : "공욱재",
+      age: 18,
+      job : "알바",
+      copyright : "미남입니다."
+    }
+    trigger.addEventListener('click', function () {
+      contents.textContent = absolutlyTrueDataReal.name + "는" + absolutlyTrueDataReal.copyright;
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 
+    ? 개발 & 디자인 작업을 하다보면, 가독성과 스타일, 그리고 유지보수를 위해 일련의 구분이 필요합니다.
+    * 그래서 개발 작업과정에서 아래와 같이 id 값을 활용하여 "해당 태그가 무슨 기능을 뜻하는지" 를 표기 해놓는 경우가 굉장히 잦았습니다.
+    * <div> 태그 자체는 '나누다' 라는 의미만 있을뿐, 메뉴, 메인, 기타 등등 들을 의미한다고 보기 어렵기 때문입니다.
+    * 많은 작업에서 아래와 같이 작업하는 문화 & 관습이 생기다보니, 웹표준 즉 HTML 버전을 주관하는 WWW에서
+    * 불필요한 '할당' 작업을 하는 경우를 줄여 id를 소모시키는 것을 직관적인 의미로 사용하자는 결론이 나왔습니다.
+    * 시나브로 '의미가 있는' 태그를 만들자는 것이 골자입니다.
+    * <div> 태그와 완전히 동일한 기능을 하지만, 태그 자체에 작성자의 용도에 대한 '의미가 존재한다' 라는 의미로 시멘틱 태그를 마련하였습니다.
+    * 경우에 따라서는 아래와 같이 사용해야만 하는 제약이 발생하므로 시멘틱 태그의 장단점을 생각하며 익혀보시기 바랍니다.  
+   -->
+  <div id="root">
+    <div id="header">
+      <div id="nav"></div>
+    </div>
+    <div id="main">
+      <div id="section">
+        <div id="aside"></div>
+        <div id="article"></div>
+      </div>
+    </div>
+    <div id="footer"></div>
+  </div>
+</body>
+</html>

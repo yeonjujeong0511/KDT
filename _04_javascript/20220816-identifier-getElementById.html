@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1 id="title">hello</h1>
+
+  <script>
+
+    let title = document.getElementById("title");
+
+    console.dir(title.textContent);
+    
+    title.addEventListener("click", function() {
+      title.textContent = "bye";
+      title.style.color = "cadetblue";
+      title.offsetParent.style.backgroundColor = "gray";
+      // 정답
+      console.dir(title);
+      
+    });
+
+
+
+  </script>
+</body>
+</html>

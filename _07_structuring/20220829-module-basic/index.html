@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./index.js" type="module" defer></script>
+  <!-- 
+    ? 프로그래밍 파일을 체계적으로 관리하기 위해 script를 외부 파일을 통해 연결하는 방식을 채택했다.
+    * CSS의 href attribute node 방식과 유사하지만, src라는 속성을 사용하는 것을 확인 할 필요가 있다.
+    * ./ ../ / 위의 예제는 상대경로 방식으로 '현재위치에서 하위디렉토리'를 의미한다. 주의해서 사용하지 않으면 원하는 방식으로 동작하지 않으니 주의
+    ? type = "module"
+    * 비교적 최근에 지원하게 된 HTML 속성으로 "모듈방식으로 프로그래밍 파일을 해석하겠다"라는 것을 명시하는 방식이다.
+    * 기존에는 모듈방식을 전혀 지원하지 않아, 다른 방식을 활용했어야 했다.
+    ? defer
+    * 정적 페이지를 모두 읽어낸 다음 스크립트를 해석(parsing)하겠다는 뜻으로 <head> 태그에서 사용할때, DOM API를 제어하는 용도일때 자주 작성해주는 편이다. 반대의 속성으로 async 라는 속성도 존재한다.
+   -->
+</head>
+<body>
+  <div id="root"></div>
+</body>
+</html>

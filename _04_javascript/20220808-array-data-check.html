@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+
+    let pokemonList = [];
+    /*
+      프로그래밍의 특성 vs 자바스크립트만의 특성
+      현재 우리는 '자바스크립트'라는 언어를 이용해 '프로그래밍'을 배우고 있습니다.
+      익히는 과정에서 for()와 같은 '작성법(syntax)'은 고유한 것이지만,
+      '반복문'은 프로그래밍 전체를 관통하는 개념입니다.
+      요컨데, C도 C++도, JAVA도, python도, GOlang, RUST 가지각색의 언어는
+      저마다 작성법이 다르기도, 동일하기도 하지만, '반복문'은 변함이 없습니다.
+
+      그러한 점에서 '학습'과 '훈련'의 초점을 일개 도구일 뿐인 자바스크립트 보다는, 
+      큰 관점에서 바라보고 프로그래밍으로
+      카테고리를 분류하시는 것이 성장기대치가 매우 높습니다.
+
+      아래의 반복문 예시의 전제는 '무슨 데이터 인지 모르지만',
+      '만약', '어쩌면', 과 같은 여러가지 가짓수를 "예측" 하고,
+      하나하나마다의 '명령'을 지정하는 것에 초점이 있습니다.
+
+      코드는 짧지만, 프로그래밍 능력이 원하는 대부분의 '사고력'을 다루고 있다고 해도 과언이 아닙니다.
+      기본기이기 때문에 너무나 당연하게 어려우므로 하나하나 적응해나갑시다!
+    */
+    for(let i = 0 ; i < pokemonList.length; i++) {
+      if(pokemonList[i] === "피카츄") {
+        console.log(i + 1 + "번째에 있습니다.");
+        pokemonList[i] = "라이츄미남";
+      } else {
+        console.log("이 데이터에는 피카츄가 없습니다.");
+      }
+    }
+    console.log(studentList);
+ 
+
+ 
+ </script>
+</body>
+
+</html>

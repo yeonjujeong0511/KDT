@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {margin:0; padding:0; box-sizing: border-box;}
+    body {
+      overflow-x: hidden;
+    }
+    
+    #root {
+      width:100vw;
+      height:100vh;
+      background-color: #333;
+    }
+
+    #pop-up {
+      width: 300px;
+      height: 500px;
+      /* 배경 흐리게 처리 한것 */
+      background-color: rgba(215, 215, 215, 0.5);
+      backdrop-filter: blur(5px);
+      /* 
+        backdrop-filter 적용 조건 
+        배경색을 담당하는 background-color property의 색상값을 
+        #112233 과 같은 hex 방식이나,red 와같은 약식 방식은 
+        -> 브라우저가 편의상 자동으로 색을 rgb() 값으로 변환하는 과정이 숨어있기때문에
+        -> 편의상 지정했던 방식은 backdrop-color 방식이 적용되지 않는다.
+        
+        rgba(red, green, blue, alpha); 값을 적용해야 정상적인 작동이 된다.
+        여기서 알파 alpha 값은 자주사용하는 opacity 값과 같게 사용할 수 있다.
+        r, g, b 는 0(검정) ~ 255(흰색) 으로 값이 많을수록 밝아지는 가산혼합원칙을 따른다.
+        opacity : 0(최솟값) ~ 0.5(50%값) ~ 1(최댓값)
+        alpha : 0(최솟값) ~ 0.5(50%값) ~ 1(최댓값)
+      
+        자바스크립트를 활용한 제어 측면에서는 최대값이 1 인 정수(integer), 소숫점이 없는 수 인것을 주목할 것
+      */
+      border-radius: 10px;
+      border: 1px solid #fff;
+
+      /* 브라우저 기준으로 고정되게끔 처리 -> 결과적으로 겹쳐지는 현상이 일어난다. */
+      position:fixed;
+      top:100px;
+      left:400px;
+
+      padding:10px;
+
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+
+  </style>
+</head>
+<body>
+  <div id="pop-up">
+    <h1>hello,</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veritatis placeat possimus eveniet obcaecati illum amet in explicabo nobis inventore repellendus assumenda quae neque sequi ratione rerum omnis id, praesentium sapiente harum alias ab consectetur. Nostrum eligendi, eius ducimus ipsam eveniet illo molestiae, excepturi, officiis suscipit molestias totam maxime perspiciatis.</p>
+    <button id="trigger">close</button>
+  </div>
+  <div id="root">
+    <img src="https://picsum.photos/id/431/1920/1080" alt="background-image">
+  </div>
+</body>
+</html>

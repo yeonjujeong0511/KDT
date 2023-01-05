@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    body {
+      width:100vw;
+      height:100vh;
+
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    nav {
+      width:70vw;
+      height:70vh;
+      border: 3px solid #000;
+      position:  absolute;
+      
+    }
+
+    body > div {
+      width:80vw;
+      height:80vh;
+      border: 1px solid #000;
+
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    body > div > div {
+      width:30vw;
+      height:80vh;
+      border: 1px solid #000;
+    }
+
+    body > div > div:nth-child(1) {
+      background-color: salmon;
+    }
+
+    body > div > div:nth-child(2) {
+      background-color: salmon;
+    }
+
+    /* 작은박스들 */
+    body > div > div:nth-child(2) >div:nth-child(1) {
+      width:inherit;
+      height:50%;
+      background-color: chocolate;
+
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    body > div > div:nth-child(2) >div:nth-child(1) > div {
+      width:50px;
+      height:50px;
+      margin:10px;
+      background-color: #fff;
+    }
+
+    body > div > div:nth-child(2) >div:nth-child(2) {
+      width:inherit;
+      height:50%;
+      background-color: crimson;
+    }
+
+    body > div > div:nth-child(1) > div {
+      width:inherit;
+      height:10%;
+      background-color: #333;
+    }
+
+    body > div > div:nth-child(3) {
+      background-color: cadetblue;
+      display:flex;
+      justify-content: center;
+      align-items: flex-end;
+    }
+
+    body > div > div:nth-child(3) > div {
+      width:inherit;
+      height:10%;
+      background-color: #333;
+ 
+    }
+
+
+  </style>
+</head>
+<body>
+  <!-- 
+
+    todo : 확인 할 포인트
+    pseudo .1 아래의 마크업에서 가장 큰 태그가 무엇인지 확인 후 -> 마크업
+    pseudo .2 영역 지정 & 구분 하는 정도의 레벨로 마크업 가공
+    pseudo .3 깊이(depth) 자식 관계가 몇개인지 확인하면서 순차적으로 영역(width, height 등) 기본 방식 마크업
+    pseudo .4 구조가 틀어지는 것이 없는지 확인 : 현재 해당 예제에서의 <h1>태그 때문에 비틀려져 있는 상황 (해결해보세요.)
+    pseudo .5 세부 스타일링 (position 등)
+
+
+
+
+
+   -->
+  <nav></nav>
+  <div>
+    <div>
+      <div>첫번째</div>
+    </div>
+    <div>
+      <div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+
+      </div>
+      <div>
+        <h1>hello</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint, aspernatur. Consequuntur, hic. Fuga, nemo. Mollitia id iure atque! Ea, dolores!</p>
+      </div>
+    </div>
+    <div>
+      <div>세번쨰</div>
+    </div>
+  </div>
+</body>
+</html>

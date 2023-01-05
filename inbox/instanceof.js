@@ -1,0 +1,6 @@
+class PropertyChecker {
+  constructor() {
+
+  }
+}
+

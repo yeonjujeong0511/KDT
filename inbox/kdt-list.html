@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script>
+    const studentList = ["강예훈", "김성현", "류주완", "마근원", "박종인", "박재형", "송형주", "양상희", "원두진", "유민호", "이상호", "정동욱", "정윤환",
+      "정정원", "지영빈", "한용준", "황초영", "김근수", "김승현", "전형민", "정연주", "이아연", "최화연"
+    ];
+    const root = document.getElementById("root");
+    root.style.margin = 0; 
+    root.style.padding = 0;
+    root.style.width = "100vw";
+    root.style.height = "100vh";
+
+
+    
+
+    const enclose = (el, con) => {
+      return `<${el}>${con}</${el}>`;
+    }
+
+    let tempArray = [];
+    studentList.forEach((val, i) => {
+      let inputTag = `<input type="checkbox"/>`;
+
+
+
+
+      let setString = enclose("li", `${inputTag} ${i + 1}번 : ${val}`);
+      tempArray.push(setString);
+    })
+
+    let bodyHTML = `
+      <ul>
+        ${tempArray.join(`\n`)}
+        </ul>
+    `;
+
+
+    root.innerHTML = bodyHTML;
+    console.dir(root);
+    root.children[0].style.listStyleType = "none";
+
+    root.children[0].style.margin = "0";
+    root.children[0].style.padding = "0";
+
+    root.children[0].style.width = "100vw";
+    root.children[0].style.height = "inherit";
+    root.children[0].style.display = "flex";
+    root.children[0].style.justfyContent = "center";
+    root.children[0].style.alignItems = "center";
+    root.children[0].style.flexDirection = "column";
+    
+    const liItems = [...document.querySelectorAll("li")];
+    liItems.forEach((value) => {
+      value.style.textAlign = "center";
+      value.style.width = "100vw";
+      value.style.height = (root.offsetHeight - 100) / studentList.length + "px"; 
+    });
+    
+
+    root.children[0].addEventListener("click", (e) => {
+      console.dir(e.target);
+      if(e.target.tagName !== "UI") {
+        e.target.style.backgroundColor = "#333";
+        e.target.style.color = "#ccc";
+      }
+
+    })
+
+
+    console.dir(root);
+
+
+  </script>
+</body>
+
+</html>

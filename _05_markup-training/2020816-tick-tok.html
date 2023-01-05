@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {margin:0; padding:0; box-sizing:border-box;}
+    #root {
+      width:100vw;
+      height:100vh;
+
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #root > h1 {
+      font-size: 5rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <h1>hello</h1>
+  </div>
+  <script>
+    let tictok = ["tic", "tok"];
+    const root = document.getElementById('root');
+    const title = root.children[0];
+    // 잘 식별했는지 검사는 필수
+    console.log(title);
+    // title.textContent = tictok[0]; // gooooooood
+    let isSwitch = true;
+    root.addEventListener('click', function () {
+      if(isSwitch === true) {
+        // 클릭하면 변수 isSwitch 의 값이 false로 다시 '재할당' 한다.
+        isSwitch = false;
+        console.log(isSwitch);
+        title.textContent = tictok[0].toUpperCase();
+        title.style.color = "#333";
+        root.style.backgroundColor = "salmon";
+      } else {
+        isSwitch = true;
+        console.log(isSwitch);
+        title.textContent = tictok[1].toUpperCase();
+        title.style.color = "salmon";
+        root.style.backgroundColor = "#333";
+      }
+    });
+  </script>
+</body>
+</html>

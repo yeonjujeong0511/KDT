@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>identifier</title>
+</head>
+<body>
+  <div id="root">
+    <ul>
+      <li>list-item-1</li>
+      <li>list-item-2</li>
+      <li>list-item-3</li>
+      <li>list-item-4</li>
+      <li>list-item-5</li>
+    </ul>
+    <section id="this-is-section"></section>
+    <article class="class-attribute"></article>
+  </div>
+  <script>
+    let root = document.getElementById('root');
+    // 태그에 커스텀된 id 속성노드(attribute node)로 문서의 데이터에 접근
+    let liItems = document.getElementsByTagName("li");
+    // 문서에 tagName을 기준으로 모두 수집 "배열로 반환"
+    let section = document.querySelector('#root > section');
+    // selector(선택자) + qeury(질의) : CSS의 선택자 방식으로 문서의 데이터에 접근
+    let liSelectorAll = document.querySelectorAll('#root > ul > li');
+    // CSS 선택자 방식으로 데이터에 접근, All 목적에 부합하는 모든 데이터를 수집
+    let article = document.getElementsByClassName('class-attibute');
+    // 함수에 선택된 이름의 클래스라면 모두 '배열로 반환'
+    console.log(root);
+    console.log(liItems);
+    console.log(section);
+    console.log(article);
+  </script>
+</body>
+</html>

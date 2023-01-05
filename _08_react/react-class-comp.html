@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React Class component style</title>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel" data-type="module">
+    console.dir(React);
+    // 위의 head 부분에서 라이브러리, 즉 일련의 코드를 잔뜩 가져왔기 때문에, 마치 태그의 객체 속성들을 살펴보듯 누군가 미리 만들어놓은 객체인 "React"를 조회하면 생각보다 많지 않은 메서드들을 확인 할 수 있습니다.
+
+    // React 라는 라이브러리도 바닐라 자바스크립트로 작성된 무언가라는 관점을 가져가는 것이 핵심입니다.
+
+    class Main extends React.Component {
+      // 생성자함수 Class 기반 react 작성 방식
+      // React라는 생성자 함수로부터 이미 만들어진 'Component'라는 이름의 메서드를 사용하는 개념입니다.
+      // Main이라는 생성자함수는 react가 지원하는 "Component"라는 기능을 '내것처럼' 사용합니다.
+      // 따라서 "Component" 메서드는 일련의 알고리즘들이 내장되어있는 것을 예측할 수 있습니다.
+      render() {
+        return (
+          <h1>이것은 일반 h1 태그!</h1>
+          )
+      }
+    }
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(<Main />);
+  </script>
+</body>
+
+</html>
